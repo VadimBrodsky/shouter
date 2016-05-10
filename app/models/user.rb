@@ -25,4 +25,5 @@ class User < ActiveRecord::Base
 
   def unfollow(user)
     followed_users.delete(user)
+  end
 end
