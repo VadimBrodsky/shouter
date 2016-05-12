@@ -1,6 +1,6 @@
 class Timeline
   # make into an active model compliant object
-  include ActiveModel::Model
+  include ActiveModel::Naming
 
   def initialize(user)
     @user = user
