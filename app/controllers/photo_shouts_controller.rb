@@ -1,6 +1,10 @@
 class PhotoShoutsController < ApplicationController
   include Shouts
 
+  def create
+    create_shout
+  end
+
   private
 
   def build_content
