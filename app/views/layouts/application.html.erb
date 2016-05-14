@@ -8,6 +8,12 @@
 </head>
 <body>
 
+    <% # passing the :search symbol instead of @search instance variable is better in this scenario because it does not complain that on some views the instance variable is not set, on the pages that we do have the @search variable the :search symbol will map to that %>
+    <%= form_for(:search, url: search_path, method: :get) do |form| %>
+        <%= form.text_field :term %>
+        <%= form.submit 'Search' %>
+    <% end %>
+
     <div>
         <% if signed_in? %>
             <%= link_to current_user.username, dashboard_path %>
