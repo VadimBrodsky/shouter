@@ -9,6 +9,6 @@ class Search
   def shouts
     Shout.search do
       fulltext(term)
-    end
+    end.results
   end
 end
